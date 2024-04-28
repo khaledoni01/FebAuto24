@@ -30,7 +30,9 @@ public class LoginPage {
 
     public void validate_baseURL() {
 //        Assert.assertTrue(TestBase.baseURL.equals(TestBase.driver.getCurrentUrl()), "baseURL didn't match");
-        Assert.assertTrue(TestBase.baseURL.equals("https://facebook.com"), "baseURL didn't match");
+        Assert.assertTrue(TestBase.baseURL.equals("https://nktechsolutions.com/membership-login/"), "baseURL didn't match");
+        Assert.assertFalse(2==2, "2 is equal to 2" );
+        Assert.assertEquals(2,2, "Expected result is NOT matching Actual result");
     }
 
 }

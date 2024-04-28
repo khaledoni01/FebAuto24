@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="smoke test suite">
+<suite name="regression test suite">
 
-    <test name="smoke test 1">
+    <groups>
+        <run>
+            <include name="smoke" />
+        </run>
+    </groups>
+
+    <parameter name="baseURL" value="https://nktechsolutions.com/membership-login/" />
+
+    <test name="regression test 1">
 
         <classes>
-            <class name="tests.SecondTest">
-                <methods>
-                    <include name="alertTest" />
-                </methods>
-            </class>
+            <class name="tests.SecondTest" />
+            <class name="tests.FirstTest"/>
+            <class name="tests.LoginTest" />
         </classes>
 
     </test>
+
 
 </suite>
